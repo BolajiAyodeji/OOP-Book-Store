@@ -1,6 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 body {
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
 }
