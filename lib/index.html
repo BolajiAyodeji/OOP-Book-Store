@@ -29,6 +29,9 @@
   <meta name="twitter:title" content="OOP Book Store">
   <meta name="twitter:description" content="A simple book store built with JavaScript">
   <meta name="twitter:image" content="/img/favicon.png">
+
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#ddd" />
 </head>
 
 <body>
@@ -76,6 +79,15 @@
 
   <script src="./app.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('./sw.js').then(function () {
+          console.log('Service Worker Registered')
+        })
+      })
+    }
+  </script>
 </body>
 
 </html>
