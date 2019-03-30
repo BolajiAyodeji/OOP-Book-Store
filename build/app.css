@@ -8,17 +8,17 @@ body {
 h1 {
   margin-top: 50px;
 }
-.success,
-    .error {
-      color: white;
-      padding: 5px;
-      margin: 5px 0 15px 0;
-    }
 
-    .success {
-      background: green;
-    }
+.success, .error {
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
 
-    .error {
-      background: red;
-    }
+.success {
+  background: #28a745;
+}
+
+.error {
+  background: #dc3545;
+}
