@@ -29,8 +29,9 @@ th, td {
   color: #fff;
   border-radius: 4px;
   padding: 10px;
-  margin: 200px 0 15px 0;
+  margin: 250px 0 15px 0;
   position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 }
