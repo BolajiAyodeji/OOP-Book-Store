@@ -1,8 +1,8 @@
 {
   "name": "OOP-Book-Store",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple book store built with JavaScript",
+  "main": "src/app.js",
   "scripts": {
     "build": "babel src -d lib -w"
   },
