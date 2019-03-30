@@ -1,4 +1,4 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css');
+@import url('./skelethon.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 body {
@@ -13,7 +13,7 @@ h1 {
 
 .success, .error {
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   margin: 5px 0 15px 0;
 }
 
