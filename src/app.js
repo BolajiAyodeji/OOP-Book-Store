@@ -33,13 +33,19 @@ UI.prototype.showAlert = (message, className) => {
 
   const container = document.querySelector('.container');
   const form = document.querySelector('#book-form');
-
   container.insertBefore(div, form);
 
   // error timeout
   setTimeout(() => {
     document.querySelector('.alert').remove();
   }, 3000);
+}
+
+// delete book
+UI.prototype.deleteBook = (target) => {
+  if(target.className === 'delete') {
+    target.parentElement.parentElement.remove();
+  }
 }
 
 // Clear Fields
@@ -49,7 +55,7 @@ UI.prototype.clearFields = () => {
   isbn.value = '';
 }
 
-// Event Listeners
+// Event Listener for add book
 const bookForm = document.getElementById('book-form');
 
 bookForm.addEventListener('submit',
@@ -58,24 +64,32 @@ function(e) {
         author = document.getElementById('author').value,
         isbn = document.getElementById('isbn').value
 
-  // init Book
   const book = new Book(title, author, isbn);
 
-  // init UI
   const ui = new UI();
 
   // Validation
   if(title === '' || author === '' || isbn === '') {
-    // Error alert
+
     ui.showAlert('Please fill all fields', 'error');
   } else {
     ui.addBookToList(book);
 
-    // Success Alert
     ui.showAlert('New Book Added!', 'success');
 
     ui.clearFields();
   }
+
+  e.preventDefault();
+});
+
+// Event listener for delete
+const bookList = document.getElementById('book-list');
+bookList.addEventListener('click', (e) => {
+  const ui = new UI();
+
+  ui.deleteBook(e.target);
+  ui.showAlert('Book removed from store!', 'success')
 
   e.preventDefault();
 })
