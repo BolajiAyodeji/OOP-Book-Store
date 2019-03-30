@@ -128,7 +128,7 @@ bookList.addEventListener('click', (e) => {
   // remove from LS
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
-  ui.showAlert('Book removed from store!', 'success')
+  ui.showAlert('Book removed from Store!', 'success')
 
   e.preventDefault();
 })
