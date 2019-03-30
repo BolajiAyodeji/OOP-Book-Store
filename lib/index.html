@@ -33,10 +33,13 @@
 
 <body>
   <div class="container">
-    <h1>Book Store</h1>
+    <section id="head">
+      <h1>Book Store</h1>
+      <p>A simple book store built with JavaScript</p>
+    </section>
     <form id="book-form">
       <div>
-        <label for="title">Title</label>
+        <label for="title">Book Title</label>
         <input type="text" id="title" class="u-full-width">
       </div>
       <div>
@@ -44,7 +47,7 @@
         <input type="text" id="author" class="u-full-width">
       </div>
       <div>
-        <label for="isbn">ISBN#</label>
+        <label for="isbn">ISBN</label>
         <input type="text" id="isbn" class="u-full-width">
       </div>
       <div>
@@ -57,7 +60,7 @@
           <th>Title</th>
           <th>Author</th>
           <th>ISBN</th>
-          <th></th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody id="book-list"></tbody>

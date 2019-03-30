@@ -16,7 +16,7 @@ class UI {
     <td>${book.title}</td>
     <td>${book.author}</td>
     <td>${book.isbn}</td>
-    <td><a href="#" class="delete">&times;</a></td>
+    <td><a href="#" class="delete">❌</a></td>
     `;
 
     list.appendChild(row);
@@ -76,7 +76,6 @@ class Store {
   static removeBook(isbn) {
     const books = Store.getBooks();
 
-
     books.forEach((book, index) => {
       if(book.isbn === isbn) {
         books.splice(index, 1);
@@ -84,7 +83,6 @@ class Store {
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
-
 }
 
 // DOM LOAD EVENT
