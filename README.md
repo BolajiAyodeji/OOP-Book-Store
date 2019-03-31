@@ -9,3 +9,6 @@ npm install
 ```bash
 npm run build
 ```
+```
+Open with a live server
+```
